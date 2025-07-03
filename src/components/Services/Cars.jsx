@@ -5,6 +5,7 @@ import etios from "../../assets/etios.png";
 import kia_carnes from "../../assets/kia_carnes.png";
 import innova from "../../assets/innova.png";
 import crysta from "../../assets/crysta.png";
+import { useNavigate } from "react-router-dom";
 
 const Cars = () => {
   const carData = [
@@ -70,7 +71,12 @@ const Cars = () => {
     },
   ];
 
-  const handleCardClick = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/");
+    
+    // Option 2: If you want to scroll to a contact section on the same page, use:
     window.scrollTo({
       top: 600,
       behavior: "smooth",
@@ -221,7 +227,8 @@ const Cars = () => {
               Need a cab? We’re ready.
             </p>
             <button
-              onClick={handleCardClick}
+              type="button"
+              onClick={handleContactClick}
               className="bg-green-500 text-white text-base font-bold px-6 py-3 rounded-full hover:bg-green-600 transition"
             >
               Contact Us
@@ -234,11 +241,13 @@ const Cars = () => {
               Need a cab? We’re ready.
             </p>
             <button
-              onClick={handleCardClick}
-              className="bg-green-500 text-white font-bold px-6 py-3 rounded-full hover:bg-green-600 transition"
-            >
-              Contact Us
-            </button>
+            type="button"
+            onClick={handleContactClick}
+            className="bg-green-500 text-white text-base font-bold px-6 py-3 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 active:bg-green-700 transition-all duration-300 cursor-pointer relative z-20 select-none"
+            style={{ pointerEvents: 'auto' }}
+          >
+            Contact Us
+          </button>
           </div>
         </div>
       </div>

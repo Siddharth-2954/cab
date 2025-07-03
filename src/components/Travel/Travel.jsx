@@ -8,6 +8,7 @@ import {
   Star,
   Clock,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const GujaratCabServices = () => {
   const gujaratPlaces = [
@@ -235,7 +236,12 @@ const GujaratCabServices = () => {
 
   const visibleItems = getVisibleItems();
 
-  const handleCardClick = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/");
+    
+    // Option 2: If you want to scroll to a contact section on the same page, use:
     window.scrollTo({
       top: 600,
       behavior: "smooth",
@@ -604,8 +610,10 @@ const GujaratCabServices = () => {
             Explored the places? Book your ride now.
           </p>
           <button
-            onClick={handleCardClick}
-            className="bg-green-500 text-white text-base font-bold px-6 py-3 rounded-full hover:bg-green-600 transition"
+            type="button"
+            onClick={handleContactClick}
+            className="bg-green-500 text-white text-base font-bold px-6 py-3 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 active:bg-green-700 transition-all duration-300 cursor-pointer relative z-20 select-none"
+            style={{ pointerEvents: 'auto' }}
           >
             Contact Us
           </button>
@@ -617,8 +625,10 @@ const GujaratCabServices = () => {
             Explored the places? Book your ride now.
           </p>
           <button
-            onClick={handleCardClick}
-            className="bg-green-500 text-white font-bold px-6 py-3 rounded-full hover:bg-green-600 transition"
+            type="button"
+            onClick={handleContactClick}
+            className="bg-green-500 text-white text-base font-bold px-6 py-3 rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300 active:bg-green-700 transition-all duration-300 cursor-pointer relative z-20 select-none"
+            style={{ pointerEvents: 'auto' }}
           >
             Contact Us
           </button>

@@ -341,7 +341,10 @@ const Hero = ({ theme }) => {
                 you and your loved ones are comfortable every time you travel
                 with us.
               </p>
-              <div className="w-full sm:w-[90%] md:w-[95%] lg:w-full">
+              <div
+                id="contact-form"
+                className="w-full sm:w-[90%] md:w-[95%] lg:w-full"
+              >
                 <Form />
               </div>
             </div>
