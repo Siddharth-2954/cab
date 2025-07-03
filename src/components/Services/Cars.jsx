@@ -46,7 +46,7 @@ const Cars = () => {
       average: "300km average day",
       da: "₹300 DA",
       extra: "Extra toll + parking",
-      image: crysta,
+      image: innova,
       features: ["8-Seater", "Premium", "Long Distance"],
     },
     {
@@ -56,7 +56,7 @@ const Cars = () => {
       average: "300km average day",
       da: "₹300 DA",
       extra: "Extra toll + parking",
-      image: innova,
+      image: crysta,
       features: ["Luxury", "VIP", "Business Travel"],
     },
     {
@@ -74,7 +74,7 @@ const Cars = () => {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate("/");
+    navigate("/contact");
     
     // Option 2: If you want to scroll to a contact section on the same page, use:
     window.scrollTo({
@@ -222,8 +222,8 @@ const Cars = () => {
           </div>
 
           {/* Mobile Version (visible on screens <640px) */}
-          <div className="sm:hidden w-[80%] mx-auto bg-yellow-400 py-4 px-8 shadow-lg flex flex-col gap-4 items-center mt-6">
-            <p className="text-black font-bold text-xl text-center">
+          <div className="sm:hidden w-[110%] -ml-5 bg-yellow-400 py-4 px-6 flex flex-row gap-10 items-center mt-6">
+            <p className="text-black font-semibold text-center text-sm">
               Need a cab? We’re ready.
             </p>
             <button
@@ -236,8 +236,8 @@ const Cars = () => {
           </div>
 
           {/* Desktop Version (visible on screens ≥640px) */}
-          <div className="hidden sm:flex w-[80%] mx-auto bg-yellow-400 py-4 px-8  shadow-lg items-center justify-between gap-10 mt-14">
-            <p className="text-black font-bold text-2xl text-center">
+          <div className="hidden sm:flex w-[126%] -ml-[13%] bg-yellow-400 py-4 px-10 sm:px-24 items-center justify-center gap-10 mt-14">
+            <p className="text-black font-bold text-xl sm:text-2xl text-center">
               Need a cab? We’re ready.
             </p>
             <button

@@ -325,30 +325,31 @@ const Testimonial = () => {
             </div>
 
             {/* Mobile Version */}
-          <div className="sm:hidden w-[110%] -ml-5 bg-yellow-400 py-4 px-6 flex flex-row gap-10 items-center mt-6">
-            <p className="text-black font-semibold text-center text-sm">
-              Planning a trip? Explore now, decide later.
-            </p>
-            <button
-              onClick={handleCardClick}
-              className="bg-green-500 text-white text-base sm:text-lg font-bold px-6 py-3 rounded-full hover:bg-green-600 transition"
-            >
-              Contact Us
-            </button>
-          </div>
+            <div className="sm:hidden w-[110%] -ml-5 bg-yellow-400 py-2 px-4 flex items-center mt-6 overflow-x-auto whitespace-nowrap">
+              <p className="text-black font-semibold text-xs whitespace-nowrap">
+                Planning a trip? Explore now, decide later.
+              </p>
+              <button
+                onClick={handleCardClick}
+                className="bg-green-500 text-white text-base sm:text-lg font-bold px-2 py-2 rounded-full hover:bg-green-600 transition"
+              >
+                Contact Us
+              </button>
+            </div>
 
-          {/* Desktop Version */}
-          <div className="hidden sm:flex w-[126%] -ml-[13%] bg-yellow-400 py-4 px-10 sm:px-24 items-center justify-center gap-10 mt-14">
-            <p className="text-black font-bold text-xl sm:text-2xl text-center">
-              Planning a trip? Explore now, decide later.
-            </p>
-            <button
-              onClick={handleCardClick}
-              className="bg-green-500 text-white font-bold px-6 py-2 rounded-full hover:bg-green-600 transition"
-            >
-              Contact Us
-            </button>
-          </div>
+            {/* Desktop Version */}
+            <div className="hidden sm:flex w-[166%] -ml-[13%] bg-yellow-400 py-4 px-10 sm:px-24 items-center justify-center gap-10 mt-14">
+              <p className="text-black font-bold text-xl sm:text-2xl text-center sm:w-screen sm:-ml-[50vw] sm:pl-[50vw]">
+                Planning a trip? Explore now, decide later.
+              </p>
+
+              <button
+                onClick={handleCardClick}
+                className="bg-green-500 text-white text-base sm:text-lg font-bold px-3 py-3 rounded-full hover:bg-green-600 transition"
+              >
+                Contact Us
+              </button>
+            </div>
           </div>
         </div>
       </div>

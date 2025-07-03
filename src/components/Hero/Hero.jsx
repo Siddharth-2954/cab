@@ -436,8 +436,8 @@ const Hero = ({ theme }) => {
 
           {/* Strip */}
           {/* Mobile Version */}
-          <div className="sm:hidden w-[110%] -ml-5 bg-yellow-400 py-4 px-6 flex flex-row gap-10 items-center mt-6">
-            <p className="text-black font-semibold text-center text-sm">
+        <div className="sm:hidden w-[110%] -ml-5 bg-yellow-400 py-2 px-4 text-center flex items-center mt-6 overflow-x-auto whitespace-nowrap">
+          <p className="text-black font-semibold text-sm whitespace-nowrap ml-8">
               Need a cab? We’re ready.
             </p>
             <button
